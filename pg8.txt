@@ -1,0 +1,41 @@
+Bgcolor.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>background color based on day of the week</title>
+</head>
+<body>
+    <form action="https://localhost/php/bgcolor.php" method="post">
+        <p>
+            <input type="submit" value="Click here"/>
+        </p>
+    </form>
+</body>
+</html>
+
+
+Bgcolor.php
+<?php
+$today = date("l");
+print("Today is $today");
+
+if ($today == "Sunday") {
+    $bgcolor = "#ffffff";
+} elseif ($today == "Monday") {
+    $bgcolor = "#ffff00";
+} elseif ($today == "Tuesday") {
+    $bgcolor = "#ff00ff";
+} elseif ($today == "Wednesday") {
+    $bgcolor = "#00ffff";
+} elseif ($today == "Thursday") {
+    $bgcolor = "#ff0000";
+} elseif ($today == "Friday") {
+    $bgcolor = "#00ff00";
+} else {
+    // Only Saturday remains
+    $bgcolor = "#0000ff";
+}
+
+print("<body style='background-color:$bgcolor'>\n");
+?>
+

@@ -1,0 +1,30 @@
+Patter.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern format</title>
+</head>
+<body bgcolor="purple">
+    <form action="http://localhost/PHP/patter.php" method="post">
+        <p>
+            <input type="submit" value="click here"/>
+        </p>
+    </form>
+</body>
+</html>
+
+
+Patter.php
+<?php
+$rows = 5;
+for ($i = $rows; $i >= 1; $i--) {
+    for ($j = $rows; $j >= $i; $j--) {
+        echo "&nbsp;";
+    }
+    for ($k = 1; $k <= $i; $k++) {
+        echo "*";
+    }
+    echo "<br>";
+}
+?>
+

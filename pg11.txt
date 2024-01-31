@@ -1,0 +1,29 @@
+Remove.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background color</title>
+</head>
+<body style="background-color: purple;">
+    <form action="http://localhost/PHP/remove.php" method="post">
+        <p>
+            <input type="submit" value="click here"/>
+        </p>
+    </form>
+</body>
+</html>
+
+
+Remove.php
+<?php
+function remove_duplicates_list($list1) {
+    $nums_unique = array_values(array_unique($list1));
+    return $nums_unique;
+}
+
+$nums = array(1, 1, 2, 2, 3, 4, 5, 5);
+print_r($nums);
+echo "After removing duplicates:\n";
+print_r(remove_duplicates_list($nums));
+?>
+
